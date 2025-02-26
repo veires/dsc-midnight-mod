@@ -1,0 +1,266 @@
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/EmojiReplace/base/Apple.css);
+.theme-dark {
+	--saturation-factor: 0 !important;
+}
+*:not(code) {
+	font-family: SF Pro !important;
+}
+html, body {
+	background: var(--background-primary) !important;
+}
+code, [class*=code] * {
+	font-family: "Fira Code" !important;
+}
+[class*=clan] {
+	display: none;
+}
+div[class*=container__][aria-label="User Badges"], span[class*=clanTagContainer__] {
+	display: none;
+}
+div[class*=tile__] div[class*=tileChild__] div[class*=content__] div[class*=background_] {
+	background-color: var(--bg-overlay-chat, var(--custom-channel-members-bg)) !important;
+}
+div[class*=tile__] div[class*=tileChild__] div[class*=border__] {
+	border: 1px solid var(--border-subtle) !important;
+}
+::selection {
+	background-color: #c0c0c0c0 !important;
+	color: #000000 !important; 
+}
+svg[class*=avatarDecoration__] {
+	display: none;
+}
+ul[class*=channelAttachmentArea_][class*=scrollbarGhost__][class*=scrollbar__] {
+	background-color: initial;
+}
+div[class*=live_] {
+	background-color: transparent !important;
+}
+div[class*=channelInfo_] div[class*=wrapper__] span[class*=users__],
+div[class*=channelInfo_] div[class*=wrapper__] span[class*=total__] {
+	padding: initial !important;
+}
+div[class*=channelInfo_] div[class*=wrapper__] span[class*=users__] {
+	align-items: center;
+	justify-content: center;
+}
+/* hacky trick */
+div[class*=channelInfo_] div[class*=wrapper__] span[class*=total__] {
+	position: relative;
+	right: 0;
+	width: 27px;
+	background-color: transparent;
+	text-align: center;
+}
+/* hacky trick 2*/
+div[class*=channelInfo_] div[class*=wrapper__] span[class*=total__]::after {
+	border: none;
+	border-left: 0.5px solid var(--border-subtle) !important;
+	height: 100%;
+	left: -1px;
+	width: 2px;
+}
+div[class*=outer_][class*=panel_].theme-midnight.theme-dark.images-dark {
+	background: var(--theme-base-color-dark) !important;
+}
+div[class*=outer_][class*=panel_].theme-midnight.theme-dark.images-dark {
+	border-left: 1px solid var(--border-subtle);
+}
+div[class*=outer_][class*=fullSize_]:not(
+	.custom-theme-background.custom-profile-theme
+) div[class*=inner_][class*=fullSize_]  {
+	background-color: var(--background-base-low);
+	border: 1px solid var(--border-subtle) !important;
+}
+div[class*=profileEffects__] {
+	display: none;
+}
+div[class*=outer_][class*=fullSize_]:not(
+	.custom-theme-background.custom-profile-theme
+) div[class*=inner_][class*=fullSize_] div[class*=body__]
+div[class*=overlay_][class*=fullSize_][class*=overlay__] {
+	background: var(--background-base-low);
+	border: 1px solid var(--border-subtle) !important;
+}
+div[class*=outer_][class*=fullSize_]:not(
+	.custom-theme-background.custom-profile-theme
+) div[class*=inner_][class*=fullSize_] header div[class*=headerInner__]
+div[class*=headerButtons__] div[class*=multipleButtons_] button {
+	background-color: var(--background-base-low);
+	border: 1px solid var(--border-subtle) !important;
+}
+/*
+div[class*=inner_][class*=fullSize_] {
+	background-color: var(--background-base-low);
+	border: 1px solid var (--border-subtle)
+}
+*/
+:root .custom-profile-theme.biteSize_c0bea0,
+:root .custom-profile-theme.fullSize_c0bea0 {
+	--custom-user-profile-theme-padding: 0px !important;
+}
+
+div[class*=inner_][class*=panel_]
+div[class*=overlay_][class*=panel][class*=overlay__] {
+	background: var(--bg-overlay-floating,var(--background-base-low)) !important;
+	border: 1px solid var(--border-faint);
+}
+div[class*=inner_][class*=panel_] header[class*=header__] foreignObject
+div[class*=banner__][style*=background-color]:not([style*=background-image]),
+div[class*=inner_][class*=panel_] header[class*=header__]
+foreignObject:has(
+	div[class*=banner__][style*=background-color]:not([style*=background-image])
+),
+div[class*=inner_][class*=fullSize_] header foreignObject
+div[class*=banner__][style*=background-color]:not([style*=background-image]),
+div[class*=inner_][class*=fullSize_] header foreignObject:has(
+	div[class*=banner__][style*=background-color]:not([style*=background-image])
+) {
+	display: none;
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] {
+	background: none;
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=coverImageWrapper__] {
+	max-width: none;
+}
+
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_] {
+	overflow: hidden;
+}
+/* hacky trick 3 */
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_]
+div[class*=inviteSplash_] {
+	z-index: -1;
+	height: 95%;
+	bottom: 0;
+	left: 0;
+	top: 2.5%;
+	right: 0;
+	width: 100%;
+	max-width: 432px;
+	min-width: 160px;
+	margin: 0;
+	position: absolute;
+	border-radius: var(--radius-xs);
+	-webkit-mask: linear-gradient(45deg, transparent, hsla(0, 0%, 100%, .4) 60%);
+	mask: linear-gradient(45deg, transparent, hsla(0, 0%, 100%, .4) 60%);
+}
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_]
+div[class*=inviteSplash_]::after {
+	display: block;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	transform: translateY(-100%);
+	backdrop-filter: blur(5px);
+}
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_]
+div[class*=content_] button[class*=button_] {
+	background-color: rgba(var(--background-primary),0.5);
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__]
+div[class*=flex__] div[class*=flex__] div[class*=flex__] button {
+	background-color: rgba(var(--background-primary),0.5);
+}
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_] {
+	background: transparent;
+}
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_] > h3 {
+	display: none;
+}
+div[id*=message-accessories-][class*=container_] div[class*=wrapper_]
+div[class*=content_] div[class*=headerLine_]
+div[class*=icon_][class*=guildIconImage_][class*=guildIcon_] {
+	background-color: transparent;
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=coverImageWrapper__]
+div[class*=coverImageActionable__][class*=coverImage__][class*=blurred__] {
+	filter: none;
+	background-position: center;
+	background-size: cover;
+	-webkit-mask: linear-gradient(45deg, transparent, hsla(0, 0%, 100%, .4) 60%);
+	mask: linear-gradient(45deg, transparent, hsla(0, 0%, 100%, .4) 60%);
+}
+
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=coverImageWrapper__]
+div[class*=coverImageActionable__][class*=coverImage__][class*=blurred__]:after {
+	display: block;
+	content: " ";
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__] div[class*=flex__]
+div[class*=partyStatus__][class*=inFront__] div[class*=state__], 
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__] div[class*=flex__]
+div[class*=partyStatus__][class*=inFront__] div[class*=state__] * {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 350;
+	color: var(--primary-400)
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__] div[class*=flex__]
+div[class*=partyStatus__][class*=inFront__] div[class*=details__] {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__] div[class*=flex__]
+div[class*=header__] {
+	color: transparent;
+	width: 0px;
+	text-wrap: nowrap;
+	/* comment this if you want custom spotify text */ display: none;
+}
+div[id*=message-accessories-][class*=container_]
+div[class*=invite__][class*=container__] div[class*=flex__] div[class*=flex__]
+div[class*=header__]:before {
+	content: "" !important;
+	text-transform: none;
+	color: var(--primary-400);
+	position: absolute;
+}
+[class*=helpIcon],[class*=clan],[class*=avatarDecoration_]{display:none !important;}
+div[class*=container__]:has(div[class*=artContainer__]) {
+	display: none;
+}
+div[class*=connection_], div[class*=connectContainer_] {
+	background-color: var(--background-primary);
+}
+div[class*=connectionHeader_] {
+	background: transparent;
+}
+div[class*=connection_], div[class*=connectContainer_] {
+	border: 1px solid var(--border-subtle) !important;
+}
+div[class*=control__] div[class*=container__][class*=checked__] {
+	background-color: var(--bg-brand) !important;
+}
+div[class*=control__] div[class*=container__][class*=checked__] svg svg * {
+	fill: var(--bg-brand) !important;
+}
+li:has(div a[class*=link__][data-list-item-id*=
+private-channels-uid_][data-list-item-id*=nitro]),
+li:has(div a[class*=link__][data-list-item-id*=
+private-channels-uid_][data-list-item-id*=shop]){
+	display: none;
+}
+div[class*=container__]:has(div div[aria-label="Start An Activity"]),
+div[class*=container__
+]:has(div div[aria-label="Start An Activity"]) + div[class*=sectionDivider__] {
+	display: none;
+}
+div[class*=name__] span[class*=username__] span {
+	/* I would do something here to detect colors that are too dark/bright
+	   to read, but I have not figured out a way to do it without JS	   */
+}
